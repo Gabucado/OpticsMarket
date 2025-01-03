@@ -1,0 +1,44 @@
+services:
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - 80:3000
+    command: >
+      sh -c "npm start"
+    environment:
+      - NEXT_PUBLIC_BACKEND_URL=backend:3000
+    depends_on:
+      - backend
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3001
+    command: >
+      sh -c "npx sequelize db:drop ; npx sequelize db:create ; npx sequelize db:migrate ; npx sequelize db:seed:all ; npm start"
+    environment:
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=OpticsMarket
+      - DB_USER=OpticsMarket
+      - DB_PASS=OpticsMarket
+    depends_on:
+      - db
+  db:
+    image: postgres:17
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: OpticsMarket
+      POSTGRES_PASSWORD: OpticsMarket
+      POSTGRES_DB: OpticsMarket
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
