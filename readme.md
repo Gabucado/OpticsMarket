@@ -41,6 +41,8 @@
   npm start
   ```
 
+El backend fue hecho utilizando koa.js, que es similar a express pero mas liviano.
+
 ### Frontend
 1. Clonar el repositorio.
 2. Navegar al directorio del frontend:
@@ -57,6 +59,8 @@
   npm run dev
   ```
 
+El front fue hecho utilizando next.js, la razon de esto es porque es un entorno más moderno y requiere menos configuración de enrutamiento.
+
 ### Usando Docker
 1. Clonar el repositorio.
 
@@ -70,3 +74,5 @@
 - Asegúrate de tener Docker y Docker Compose instalados en tu sistema.
 - Las variables de entorno necesarias deben ser definidas en los archivos `.env` correspondientes.
 - Esta app usa el puerto HTTP, ojalá que no haya nada corriendo ahí al momento de levantar el contenedor.
+- Es posible encontrar una descripción del modelo y la arquitectura en localhost/about una vez levantado el contenedor.
+
