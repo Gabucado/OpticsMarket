@@ -23,6 +23,8 @@
   NEXT_PUBLIC_BACKEND_URL=
   ```
 
+Es ideal tener docker con docker compose.
+
 ## Instrucciones
 
 ### Backend
@@ -66,7 +68,7 @@ El front fue hecho utilizando next.js, la razon de esto es porque es un entorno 
 
 2. Levantar la aplicación completa:
   ```bash
-  docker-compose up
+  docker compose up
   ```
 3. Visitar [http://localhost](http://localhost) en tu navegador.
 
