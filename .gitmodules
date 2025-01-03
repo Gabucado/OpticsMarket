@@ -1,6 +1,6 @@
-[submodule "MarketOptics-front"]
-	path = frontend
-	url = https://github.com/Gabucado/MarketOptics-front.git
-[submodule "MarketOptics-back"]
+[submodule "backend"]
 	path = backend
 	url = https://github.com/Gabucado/MarketOptics-back.git
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/Gabucado/MarketOptics-front.git
