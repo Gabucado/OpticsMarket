@@ -1,0 +1,6 @@
+[submodule "MarketKoa-front"]
+	path = MarketKoa-front
+	url = https://github.com/Gabucado/MarketKoa-front.git
+[submodule "MarketKoa"]
+	path = MarketKoa
+	url = https://github.com/Gabucado/MarketKoa.git
